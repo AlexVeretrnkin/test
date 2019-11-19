@@ -18,7 +18,7 @@ public class AccountAnalytics {
     public static AccountAnalytics of(Collection<Account> accounts) {
         return new AccountAnalytics(accounts);
     }
-
+    
     private AccountAnalytics(Collection<Account> accounts) {
         this.accounts = accounts;
     }
