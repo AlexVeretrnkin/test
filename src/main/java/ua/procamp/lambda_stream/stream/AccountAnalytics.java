@@ -13,11 +13,13 @@ import java.util.stream.Collectors;
  */
 public class AccountAnalytics {
 
+
     private Collection<Account> accounts;
 
     public static AccountAnalytics of(Collection<Account> accounts) {
         return new AccountAnalytics(accounts);
     }
+
 
     private AccountAnalytics(Collection<Account> accounts) {
         this.accounts = accounts;
