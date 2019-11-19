@@ -12,6 +12,11 @@ import java.util.stream.Collectors;
  * Implement methods using Stream API
  */
 public class AccountAnalytics {
+
+
+
+
+
     private Collection<Account> accounts;
 
     public static AccountAnalytics of(Collection<Account> accounts) {
