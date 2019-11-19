@@ -2,9 +2,10 @@ package ua.procamp.equasion;
 
 public class EquationSolver {
 
-    public  Double[] solveSquareEquation(Double a, Double b, Double c) {
+    public Double[] solveSquareEquation(Double a, Double b, Double c) {
         Double d = b * b - 4 * a * c;
-        Double x1, x2;
+        Double x1;
+        Double x2;
 
         if (a == 0d) {
             //Linear
@@ -27,7 +28,8 @@ public class EquationSolver {
 
             return new Double[]{x1, x2};
         } else {
-            Double im, re;
+            Double im;
+            Double re;
 
             im = Math.sqrt(-d) / (2d * a);
             re = (-b) / (2 * a);
@@ -42,7 +44,7 @@ public class EquationSolver {
     }
 
 
-    public Double solveLinearEquation(Double b, Double c){
+    public Double solveLinearEquation(Double b, Double c) {
         double x;
 
         if (b != 0d) {
@@ -51,12 +53,12 @@ public class EquationSolver {
             System.out.println("x = " + x);
 
             return x;
-        } else  if (c == 0d && b == 0d){
+        } else if (c == 0d) {
             System.out.println("This equation has infinite solutions ");
             return null;
         } else {
             System.out.println("This equation is not solvable");
             return null;
-    }
+        }
     }
 }

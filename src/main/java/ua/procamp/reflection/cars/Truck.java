@@ -1,7 +1,7 @@
-package ua.procamp.reflection.Cars;
+package ua.procamp.reflection.cars;
 
-import ua.procamp.reflection.Rules.RoadSign;
-import ua.procamp.reflection.Rules.UsageLimit;
+import ua.procamp.reflection.rules.RoadSign;
+import ua.procamp.reflection.rules.UsageLimit;
 
 public class Truck extends Car {
     /**
@@ -36,10 +36,10 @@ public class Truck extends Car {
     @Override
     public boolean canEnterAt(RoadSign roadSign) {
         switch (roadSign) {
-            case EntryForbiddenForAll:
-            case EntryForbiddenForTrucks:
+            case ENTRY_FORBIDDEN_FOR_ALL:
+            case ENTRY_FORBIDDEN_FOR_TRUCKS:
                 return false;
-            case EntryForbiddenForMotorcycles:
+            case ENTRY_FORBIDDEN_FOR_MOTORCYCLES:
             default:
                 return true;
         }
@@ -47,7 +47,7 @@ public class Truck extends Car {
 
     @Override
     public RoadSign[] getEntryAllowedSigns() {
-        return new RoadSign[]{RoadSign.EntryForbiddenForMotorcycles};
+        return new RoadSign[]{RoadSign.ENTRY_FORBIDDEN_FOR_MOTORCYCLES};
     }
 
     @Override

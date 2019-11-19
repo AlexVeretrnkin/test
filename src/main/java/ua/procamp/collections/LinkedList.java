@@ -48,8 +48,11 @@ public class LinkedList<T> implements List<T> {
             for (T element : elements) {
                 last = new Node<>(last, element);
             }
-            while (last.getPrevious() != null) { // Return back to first node
-                last = last.getPrevious();
+
+            if (last != null) {
+                while (last.getPrevious() != null) { // Return back to first node
+                    last = last.getPrevious();
+                }
             }
         }
         return new LinkedList<>(last, elements.length);
@@ -79,12 +82,12 @@ public class LinkedList<T> implements List<T> {
      */
     @Override
     public void add(int index, T element) {
-        if (index > this.size  || index < 0) {
+        if (index > this.size || index < 0) {
             throw new IndexOutOfBoundsException();
-        } else if (index == 0 ) {
+        } else if (index == 0) {
             this.head = new Node<>(element, this.head);
         } else if (index == this.size) {
-            new Node<>(getNode(index - 1 ), element);
+            new Node<>(getNode(index - 1), element);
         } else {
             Node<T> selected = getNode(index);
             new Node<>(selected.getPrevious(), element, selected);

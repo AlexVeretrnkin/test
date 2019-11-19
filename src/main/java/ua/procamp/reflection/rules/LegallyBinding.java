@@ -1,4 +1,4 @@
-package ua.procamp.reflection.Rules;
+package ua.procamp.reflection.rules;
 
 import java.lang.annotation.*;
 

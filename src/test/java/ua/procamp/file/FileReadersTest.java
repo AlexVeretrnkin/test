@@ -3,7 +3,7 @@ package ua.procamp.file;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-import ua.procamp.fileReader.FileReaders;
+import ua.procamp.file_reader.FileReaders;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

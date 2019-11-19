@@ -1,9 +1,9 @@
-package ua.procamp.reflection.Reflection;
+package ua.procamp.reflection.reflection;
 
 import org.junit.Test;
-import ua.procamp.reflection.Cars.Car;
-import ua.procamp.reflection.Cars.CarBlueprint;
-import ua.procamp.reflection.Cars.CarBrand;
+import ua.procamp.reflection.cars.Car;
+import ua.procamp.reflection.cars.CarBlueprint;
+import ua.procamp.reflection.cars.CarBrand;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

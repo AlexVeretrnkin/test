@@ -1,11 +1,11 @@
 package ua.procamp.reflection;
 
 
-import ua.procamp.reflection.Cars.Car;
-import ua.procamp.reflection.Cars.CarBlueprint;
-import ua.procamp.reflection.Cars.CarBrand;
-import ua.procamp.reflection.Cars.Truck;
-import ua.procamp.reflection.Reflection.ReflectionUtils;
+import ua.procamp.reflection.cars.Car;
+import ua.procamp.reflection.cars.CarBlueprint;
+import ua.procamp.reflection.cars.CarBrand;
+import ua.procamp.reflection.cars.Truck;
+import ua.procamp.reflection.reflection.ReflectionUtils;
 
 public class Main {
 

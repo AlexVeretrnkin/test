@@ -1,4 +1,4 @@
-package ua.procamp.reflection.Cars;
+package ua.procamp.reflection.cars;
 
 public enum CarBrand {
     HOMEMADE,

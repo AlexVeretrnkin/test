@@ -1,7 +1,6 @@
-package ua.procamp.fileStats;
+package ua.procamp.file_stats;
 
-import ua.procamp.fileReader.FileReaders;
-import ua.procamp.util.MutableInt;
+import ua.procamp.file_reader.FileReaders;
 
 import java.io.IOError;
 import java.util.Map;
@@ -14,7 +13,6 @@ import java.util.stream.Stream;
  * are ignored.
  */
 public class FileStats {
-    private Map<Character, MutableInt> characterOccurrences;
     private String fileContent;
 
     private FileStats(String fileName) {
@@ -24,21 +22,6 @@ public class FileStats {
         } catch (IOError | NullPointerException e) {
             throw new FileStatsException("File was not found", e);
         }
-
-//        String contents;
-//        try {
-//            contents = FileReaders.readWholeFile(fileName);
-//        } catch (IOError | NullPointerException e) {
-//            throw new FileStatsException("File was not found", e);
-//        }
-//        characterOccurrences = new HashMap<>();
-//        for (char character : contents.toCharArray()) {
-//            if (characterOccurrences.containsKey(character)) {
-//                characterOccurrences.get(character).increment();
-//            } else if (character != ' ') {
-//                characterOccurrences.put(character, new MutableInt(1));
-//            }
-//        }
     }
 
     /**

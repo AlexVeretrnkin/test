@@ -63,7 +63,7 @@ public class AccountAnalytics {
      */
     public Map<String, List<Account>> groupAccountsByEmailDomain() {
         return this.accounts.stream()
-                .collect(Collectors.groupingBy(a -> a.getEmail().substring(a.getEmail().indexOf("@") + 1)));
+                .collect(Collectors.groupingBy(a -> a.getEmail().substring(a.getEmail().indexOf('@') + 1)));
     }
 
     /**
@@ -135,8 +135,6 @@ public class AccountAnalytics {
                 .collect(Collectors.toMap(Account::getId, a -> a));
     }
 
-
-    // TODO WRONG TEST
     /**
      * Filters accounts by the year when an account was created. Collects account balances by its emails into a {@link Map}.
      * The key is {@link Account#email} and the value is {@link Account#balance}
