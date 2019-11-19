@@ -3,12 +3,10 @@ package ua.procamp.file;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-import ua.procamp.fileStats.FileStats;
-import ua.procamp.fileStats.FileStatsException;
+import ua.procamp.file_stats.FileStats;
+import ua.procamp.file_stats.FileStatsException;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 @RunWith(JUnit4.class)
 public class FileStatsTest {
@@ -17,6 +15,8 @@ public class FileStatsTest {
     @Test
     public void testCreateFileStatsFromExistingFile() {
         FileStats fileStats = FileStats.from("sotl.txt");
+
+        assertNotNull(fileStats);
     }
 
     @Test(expected = FileStatsException.class)

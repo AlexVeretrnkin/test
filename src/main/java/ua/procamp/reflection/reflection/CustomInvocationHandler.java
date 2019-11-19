@@ -1,4 +1,4 @@
-package ua.procamp.reflection.Reflection;
+package ua.procamp.reflection.reflection;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;

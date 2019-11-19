@@ -1,4 +1,4 @@
-package ua.procamp.reflection.Reflection;
+package ua.procamp.reflection.reflection;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -10,8 +10,11 @@ import java.util.List;
 
 public class ReflectionUtils {
 
+    private ReflectionUtils() {
+    }
+
     public static List<Field> getAllFields(Object object) {
-        List<Field> fields = new LinkedList<Field>();
+        List<Field> fields = new LinkedList<>();
         Class clazz = object.getClass();
         while (!clazz.equals(Object.class)) {
             fields.addAll(Arrays.asList(clazz.getDeclaredFields()));
@@ -21,7 +24,7 @@ public class ReflectionUtils {
     }
 
     public static List<Method> getAllMethods(Object object) {
-        List<Method> methods = new LinkedList<Method>();
+        List<Method> methods = new LinkedList<>();
         Class clazz = object.getClass();
         while (!clazz.equals(Object.class)) {
             methods.addAll(Arrays.asList(clazz.getMethods()));
@@ -31,7 +34,7 @@ public class ReflectionUtils {
     }
 
     public static <T> List<Class<? super T>> getAllInterfaces(Object object) {
-        List<Class<? super T>> superInterfaces = new LinkedList<Class<? super T>>();
+        List<Class<? super T>> superInterfaces = new LinkedList<>();
         Class clazz = object.getClass();
         while (!clazz.equals(Object.class)) {
             if (clazz.getInterfaces().length != 0) {
@@ -46,10 +49,10 @@ public class ReflectionUtils {
 
 
     public static void printAllFieldsWithTheirTypesAndAnnotations(Object object) {
-        for (Field field: getAllFields(object)){
+        for (Field field : getAllFields(object)) {
             System.out.println("Field: " + field.getName() + " type: " + field.getType());
 
-            for (Annotation annotation: field.getDeclaredAnnotations()) {
+            for (Annotation annotation : field.getDeclaredAnnotations()) {
                 System.out.println("    annotation: " + annotation.toString());
             }
 
@@ -57,15 +60,15 @@ public class ReflectionUtils {
     }
 
     public static void invokeAllAnnotatedMethods(Object object) {
-        for (Method method: getAllMethods(object)){
-            if ((method.getDeclaredAnnotations().length > 0) &&  (method.getParameterTypes().length == 0)) {
+        for (Method method : getAllMethods(object)) {
+            if ((method.getDeclaredAnnotations().length > 0) && (method.getParameterTypes().length == 0)) {
                 method.setAccessible(true);
 
                 try {
                     method.invoke(object);
 
                     System.out.println(method.getName() + " invoked successfully");
-                } catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -77,7 +80,7 @@ public class ReflectionUtils {
     }
 
     public static <T> List<String> getInterfaceNames(Object object) {
-        List<String> interfaceNames = new LinkedList<String>();
+        List<String> interfaceNames = new LinkedList<>();
 
         for (Class clazz : getAllInterfaces(object)) {
             interfaceNames.add(clazz.getSimpleName());
@@ -91,6 +94,6 @@ public class ReflectionUtils {
         Class clazz = getAllInterfaces(object).get(0);
 
         return Proxy.newProxyInstance(clazz.getClassLoader(),
-                new Class [] {clazz}, new CustomInvocationHandler(object));
+                new Class[]{clazz}, new CustomInvocationHandler(object));
     }
 }

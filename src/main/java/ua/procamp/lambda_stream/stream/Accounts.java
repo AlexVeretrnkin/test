@@ -15,8 +15,6 @@ public interface Accounts {
     static Account getAccount(){
         Fairy fairy = Fairy.create();
         Person person = fairy.person();
-        Random random = new Random();
-
 
         Account fakeAccount = new Account();
         fakeAccount.setFirstName(person.getFirstName());
@@ -27,7 +25,7 @@ public interface Accounts {
                 person.getDateOfBirth().getMonthValue(),
                 person.getDateOfBirth().getDayOfMonth()));
         fakeAccount.setSex(Sex.valueOf(person.getSex().name()));
-        fakeAccount.setBalance(BigDecimal.valueOf(random.nextInt(200_000)));
+        fakeAccount.setBalance(BigDecimal.valueOf(new Random().nextInt(200_000)));
         fakeAccount.setCreationDate(LocalDate.now());
 
         return fakeAccount;

@@ -16,6 +16,8 @@ public class LinkedStackTest {
     @Test
     public void testPushElementOntoEmptyStack() {
         intStack.push(234);
+
+        assertEquals(1, intStack.size());
     }
 
     @Test
@@ -31,7 +33,7 @@ public class LinkedStackTest {
 
         intStack.push(55);
 
-        assertEquals(intStack.pop(), 55);
+        assertEquals(55, intStack.pop());
     }
 
     @Test
@@ -44,29 +46,29 @@ public class LinkedStackTest {
         intStack.push(234);
         Integer lastElement = intStack.pop();
 
-        assertEquals(lastElement, 234);
+        assertEquals(234, lastElement);
     }
 
     @Test
-    public void testSize(){
+    public void testSize() {
         intStack.push(87);
         intStack.push(53);
         intStack.push(66);
 
         int actualSize = intStack.size();
 
-        assertEquals(actualSize, 3);
+        assertEquals(3, actualSize);
     }
 
     @Test
-    public void testSizeOnEmptyStack(){
+    public void testSizeOnEmptyStack() {
         int actualSize = intStack.size();
 
-        assertEquals(actualSize, 0);
+        assertEquals(0, actualSize);
     }
 
     @Test
-    public void testIsEmpty(){
+    public void testIsEmpty() {
         intStack.push(87);
         intStack.push(53);
         intStack.push(66);
@@ -77,7 +79,7 @@ public class LinkedStackTest {
     }
 
     @Test
-    public void testIsEmptyOnEmptyStack(){
+    public void testIsEmptyOnEmptyStack() {
         boolean stackEmpty = intStack.isEmpty();
 
         assertTrue(stackEmpty);

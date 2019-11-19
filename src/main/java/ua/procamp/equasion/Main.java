@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args){
-        Double a,b,c;
+        Double a;
+        Double b;
+        Double c;
 
         Scanner scan = new Scanner(System.in);
 

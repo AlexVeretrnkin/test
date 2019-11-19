@@ -1,4 +1,4 @@
-package ua.procamp.fileReader;
+package ua.procamp.file_reader;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -12,6 +12,7 @@ import java.util.stream.Stream;
  */
 public class FileReaders {
 
+    private FileReaders() { }
     /**
      * Returns a {@link String} that contains whole text from the file specified by name.
      *
@@ -19,6 +20,8 @@ public class FileReaders {
      * @return string that holds whole file content
      */
     public static String readWholeFile(String fileName) {
+        String result;
+
         ClassLoader classLoader = ClassLoader.getSystemClassLoader();
 
         Path pathToString = Paths.get(classLoader.getResource(fileName).getFile());
@@ -30,33 +33,12 @@ public class FileReaders {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        finally {
+            result = lines.collect(Collectors.joining("\n", "", ""));
 
-        return lines.collect(Collectors.joining("\n", "", ""));
-//        return Stream.of(lines.collect(Collectors.joining()));
+            lines.close();
+        }
 
-//        FileInputStream fis = null;
-//        try {
-//            fis = new FileInputStream(file);
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//        byte[] data = new byte[(int) file.length()];
-//        try {
-//            fis.read(data);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        try {
-//            fis.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        try {
-//            return new String(data, "UTF-8");
-//        } catch (UnsupportedEncodingException e) {
-//            e.printStackTrace();
-//        }
-//
-//        return "";
+        return result;
     }
 }
