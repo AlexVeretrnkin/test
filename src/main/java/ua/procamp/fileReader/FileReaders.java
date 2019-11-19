@@ -31,7 +31,7 @@ public class FileReaders {
             e.printStackTrace();
         }
 
-        return lines.collect(Collectors.joining("", "", ""));
+        return lines.collect(Collectors.joining("\n", "", ""));
 //        return Stream.of(lines.collect(Collectors.joining()));
 
 //        FileInputStream fis = null;

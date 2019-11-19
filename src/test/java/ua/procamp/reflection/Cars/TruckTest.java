@@ -24,5 +24,4 @@ public class TruckTest {
     public void canEnterAt_ForbiddenForTrucks() {
         assertTrue(new Car().canEnterAt(RoadSign.EntryForbiddenForTrucks));
     }
-
 }
