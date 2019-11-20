@@ -4,6 +4,7 @@ import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+//f1
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
 @Getter
