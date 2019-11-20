@@ -6,7 +6,7 @@ import java.util.function.*;
 
 public class CrazyLambdas {
     // m1
-
+    // m2
     private CrazyLambdas() {}
 
     /**
