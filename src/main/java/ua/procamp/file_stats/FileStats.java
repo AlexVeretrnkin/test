@@ -13,6 +13,7 @@ import java.util.stream.Stream;
  * are ignored.
  */
 public class FileStats {
+
     private String fileContent;
 
     private FileStats(String fileName) {
