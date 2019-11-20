@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.function.*;
 
 public class CrazyLambdas {
+    // m1
 
     private CrazyLambdas() {}
 
