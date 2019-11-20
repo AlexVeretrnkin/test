@@ -17,7 +17,6 @@ public class FileStats {
     private String fileContent;
 
     private FileStats(String fileName) {
-
         try {
             fileContent = FileReaders.readWholeFile(fileName).replaceAll("\\s+", "");
         } catch (IOError | NullPointerException e) {
