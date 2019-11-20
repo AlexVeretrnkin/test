@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05cf00b2-1880-4866-99c0-769f962aafb4" name="Default Changelist" comment="commit">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ua/procamp/lambda_stream/stream/AccountAnalytics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/procamp/lambda_stream/stream/AccountAnalytics.java" afterDir="false" />
+    <list default="true" id="05cf00b2-1880-4866-99c0-769f962aafb4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/procamp/collections/EmptyStackException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/procamp/collections/EmptyStackException.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,14 +17,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ua/procamp/lambda_stream/stream/AccountAnalytics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="105">
+              <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ua/procamp/collections/EmptyStackException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -220,6 +229,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="procamp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="file-stats" type="b2602c69:ProjectViewProjectNode" />
+              <item name="file-stats" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="procamp" type="462c0819:PsiDirectoryNode" />
+              <item name="collections" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="file-stats" type="b2602c69:ProjectViewProjectNode" />
@@ -506,7 +524,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47676000" />
+    <option name="totallyTimeSpent" value="47720000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -526,10 +544,10 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.26466382" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.26466382" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.49928468" weight="0.6075419" />
+      <window_info anchor="bottom" id="Version Control" order="1" sideWeight="0.49928468" weight="0.46648043" />
       <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49928468" weight="0.61731845" />
       <window_info anchor="bottom" id="Database Changes" order="3" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5007153" side_tool="true" weight="0.6075419" />
@@ -603,7 +621,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="origin/test" />
                       </list>
                     </value>
                   </entry>
@@ -629,6 +647,11 @@
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
+                  <option value="origin/test" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
                   <option value="HEAD" />
                 </option>
               </RecentGroup>
@@ -649,12 +672,15 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="first commit" />
     <MESSAGE value="added equation" />
     <MESSAGE value="added lambdas/streams" />
     <MESSAGE value="new commit" />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="t1" />
+    <MESSAGE value="t2" />
+    <option name="LAST_COMMIT_MESSAGE" value="t2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/stream/Collectors.java">
@@ -909,15 +935,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/procamp/collections/EmptyStackException.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ua/procamp/fileReader/FileReaders.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+        <state relative-caret-position="45">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ua/procamp/fileReader/FileReaders.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/ua/procamp/lambda_stream/lambda/CrazyLambdasTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1011,8 +1035,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ua/procamp/lambda_stream/stream/AccountAnalytics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state relative-caret-position="105">
+          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
