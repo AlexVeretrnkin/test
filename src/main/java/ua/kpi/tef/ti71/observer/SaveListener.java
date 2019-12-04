@@ -4,7 +4,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class SaveListener implements EventListener {
-
     public SaveListener() {
         // It's empty
     }
